@@ -1,0 +1,67 @@
+/* Newsletter.module.css */
+
+.newsletter {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 30rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #1a1a1a; /* Gris muy oscuro */
+  border-radius: 12px;
+  border: 1px solid #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.newsletter input {
+  flex: 1; /* El input crece para ocupar el espacio disponible */
+  padding: 0.75rem 1rem;
+  background-color: #0a0a0a; /* Más oscuro que el contenedor */
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.newsletter input::placeholder {
+  color: #666;
+}
+
+.newsletter input:focus {
+  outline: none;
+  border-color: #4a90e2; /* Azul de acento */
+  background-color: #111;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.newsletter button {
+  padding: 0.75rem 1.5rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap; /* Evita que el texto del botón se rompa */
+  transition: all 0.2s ease;
+}
+
+.newsletter button:hover {
+  background-color: #357abd;
+  transform: translateY(-1px);
+}
+
+.newsletter button:active {
+  transform: translateY(0);
+}
+
+/* Responsive: en pantallas muy pequeñas los apila */
+@media (max-width: 480px) {
+  .newsletter {
+    flex-direction: column;
+  }
+
+  .newsletter button {
+    width: 100%;
+  }
+}
