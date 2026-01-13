@@ -1,0 +1,91 @@
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.form {
+  width: 100%;
+  max-width: 25rem;
+  padding: 2.5rem;
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  border: 1px solid #333;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+.form h1 {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+}
+
+.form p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #a0a0a0;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.form input {
+  padding: 0.8rem 1rem;
+  background-color: #0a0a0a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  background-color: #111;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.15);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #357abd;
+}
+
+.toggle {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.toggle:hover {
+  color: #4a90e2;
+}

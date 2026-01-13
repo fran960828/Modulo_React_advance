@@ -1,9 +1,11 @@
 // foodRepository.ts
 
 import type {
+  AuthEvent,
   EventGet,
   EventPatch,
   EventPost,
+  TokenEvent,
 } from "../domain/models";
 
 export interface GetEventRepository {
@@ -21,4 +23,8 @@ export interface PatchEventRepository {
 
 export interface DeleteEventRepository {
   deleteEvent: (id: string) => Promise<void>;
+}
+
+export interface AuthenticationRepository {
+  authEvent: (auth: AuthEvent) => Promise<TokenEvent>;
 }

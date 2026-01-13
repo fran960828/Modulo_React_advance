@@ -1,7 +1,11 @@
+import NewsletterPage from "../pages/NewsletterPage";
+import { getAuthToken } from "../utils/utils";
 import classes from "./MainNavigation.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, Form } from "react-router-dom";
 
 function MainNavigation() {
+  const token = getAuthToken();
+
   return (
     <header className={classes.header}>
       <nav>
@@ -36,8 +40,29 @@ function MainNavigation() {
               Newsletter
             </NavLink>
           </li>
+          {!token ? (
+            <li>
+              <NavLink
+                to="authentification"
+                className={({ isActive }) =>
+                  isActive ? "px-4 py-2 bg-amber-400 rounded-sm" : undefined
+                }
+              >
+                Authentification
+              </NavLink>
+            </li>
+          ) : (
+            <li>
+              <Form action="/logout" method="post">
+                <button>Logout</button>
+              </Form>
+            </li>
+          )}
         </ul>
       </nav>
+      <div>
+        <NewsletterPage />
+      </div>
     </header>
   );
 }

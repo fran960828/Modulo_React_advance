@@ -32,8 +32,11 @@ import { action as eventPostAction } from "./actions/newEvent.action";
 import { action as eventPatchAction } from "./actions/newEvent.action";
 import { action as eventDeleteAction } from "./actions/eventDetail.action";
 import { action as eventNewsletterAction } from "./actions/newsletter.action";
+import { action as authentificationAction } from "./actions/Authentication.action";
+import { action as logOutAction } from "./actions/logOut.action";
 import ErrorPage from "./presentation/pages/ErrorPage";
 import NewsletterPage from "./presentation/pages/NewsletterPage";
+import { AuthPage } from "./presentation/pages/AuthPage";
 function App() {
   const route = createBrowserRouter([
     {
@@ -68,10 +71,17 @@ function App() {
           ],
         },
         {
+          path: "authentification",
+          element: <AuthPage />,
+          action: authentificationAction,
+        },
+
+        {
           path: "newsletter",
           element: <NewsletterPage />,
           action: eventNewsletterAction,
         },
+        { path: "logout", action: logOutAction },
       ],
     },
   ]);

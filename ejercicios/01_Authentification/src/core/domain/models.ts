@@ -25,6 +25,17 @@ export type getEventResponse = { event: EventGet };
 // PROPS
 
 export interface IEventForm {
-  method:HTMLFormMethod,
-  event?:EventPost
+  method: HTMLFormMethod;
+  event?: EventPost;
+}
+
+// AUTH
+export interface AuthEvent {
+  email: string;
+  password: string;
+  mode: "login" | "signup";
+}
+
+export interface TokenEvent {
+  token: string;
 }
