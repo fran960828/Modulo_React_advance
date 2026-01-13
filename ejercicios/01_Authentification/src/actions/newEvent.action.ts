@@ -1,8 +1,13 @@
 import { redirect } from "react-router-dom";
 import type { ActionFunctionArgs } from "react-router-dom";
 import { postEventDef, patchEventDef } from "../config/dependencies";
+import { getAuthToken } from "../presentation/utils/utils";
 
 export async function action({ request, params }: ActionFunctionArgs) {
+  const token=getAuthToken()
+  if (!token){
+    return redirect('/authentification?mode=login')
+  }
   const method = request.method;
   const formData = await request.formData();
 

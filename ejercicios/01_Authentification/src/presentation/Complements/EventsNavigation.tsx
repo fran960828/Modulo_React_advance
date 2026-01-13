@@ -1,7 +1,8 @@
 import classes from './EventsNavigation.module.css';
-import {Link} from 'react-router-dom'
+import {Link, useRouteLoaderData} from 'react-router-dom'
 
 function EventsNavigation() {
+  const token=useRouteLoaderData('root')
   return (
     <header className={classes.header}>
       <nav>
@@ -9,9 +10,12 @@ function EventsNavigation() {
           <li>
             <Link to="/events">All Events</Link>
           </li>
-          <li>
+          {token &&
+            <li>
             <Link to="/events/new">New Event</Link>
           </li>
+            }
+          
         </ul>
       </nav>
     </header>

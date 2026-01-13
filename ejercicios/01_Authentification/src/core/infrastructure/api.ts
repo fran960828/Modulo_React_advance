@@ -2,6 +2,18 @@ const parseJson = async <T>(res: Response): Promise<T> => {
   const text = await res.text();
   return text && JSON.parse(text);
 };
+const getAuthHeaders = () => {
+  const token = localStorage.getItem('token');
+  const headers: Record<string, string> = {
+    "Content-Type": "application/json",
+  };
+
+  if (token) {
+    headers["Authorization"] = `Bearer ${token}`;
+  }
+
+  return headers;
+};
 
 export const httpClient = {
   get: async <T>(url: string): Promise<T> => {
@@ -20,7 +32,7 @@ export const httpClient = {
     const res = await fetch(url, {
       method: "PATCH",
       body: JSON.stringify(body),
-      headers: { "Content-Type": "application/json" },
+      headers: getAuthHeaders(),
     });
     if (!res.ok)
       throw new Response(
@@ -33,7 +45,7 @@ export const httpClient = {
   },
 
   delete: async (url: string): Promise<void> => {
-    const res = await fetch(url, { method: "DELETE" });
+    const res = await fetch(url, { method: "DELETE",headers:getAuthHeaders() });
     if (!res.ok)
       throw new Response(
         JSON.stringify({ message: "Could not fetch events." }),
@@ -46,7 +58,7 @@ export const httpClient = {
     const res = await fetch(url, {
       method: "POST",
       body: JSON.stringify(body),
-      headers: { "Content-Type": "application/json" },
+      headers:getAuthHeaders(),
     });
 
     if (!res.ok) {

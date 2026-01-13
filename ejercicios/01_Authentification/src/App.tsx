@@ -28,6 +28,8 @@ import { EditEvent } from "./presentation/pages/EditEvent";
 import { NewEvent } from "./presentation/pages/NewEvent";
 import { loader as eventsLoader } from "./loaders/events.loader";
 import { loader as eventLoader } from "./loaders/eventsDetail.loader";
+import {loader as rootLoader} from "./loaders/authRoot.loader";
+import {loader as checkLoader} from "./loaders/checkRoute.loader";
 import { action as eventPostAction } from "./actions/newEvent.action";
 import { action as eventPatchAction } from "./actions/newEvent.action";
 import { action as eventDeleteAction } from "./actions/eventDetail.action";
@@ -43,6 +45,8 @@ function App() {
       path: "/",
       element: <RootLayout />,
       errorElement: <ErrorPage />,
+      id:'root',
+      loader:rootLoader,
       children: [
         { index: true, element: <Home /> },
         {
@@ -58,6 +62,7 @@ function App() {
                 {
                   index: true,
                   element: <EventDetail />,
+                  loader:checkLoader,
                   action: eventDeleteAction,
                 },
                 {
@@ -67,7 +72,7 @@ function App() {
                 },
               ],
             },
-            { path: "new", element: <NewEvent />, action: eventPostAction },
+            { path: "new", element: <NewEvent />,loader:checkLoader, action: eventPostAction },
           ],
         },
         {
