@@ -1,12 +1,14 @@
 rol: Experto en React con typescript. consulta: Haz una documentación para una persona principiante con una explicación en forma de comentario al inicio y tras la explicación emplea un ejemplo sencillo para que quede más claro de los siguientes conceptos:
 
-- Explicación de instalación de un proyecto con next.js paso por paso.
-- Explicación y uso de Page como componente del servidor.
-- Explicación y uso de la creación de rutas creando carpetas en el directorio app y el uso de special filenames como pages, layout, error, not-found,loading y route.
-- Explicación y uso de Link procedente de next.js para no recargar la pagina al cambiar de page.
-- Explicación y uso de rootLayout como wrapper de la ruta activa.
-- Explicación y uso de componentes en carpetas ya sea dentro de la app router o fuera (si esa carpeta component no lleva el nombre de page no renderiza la ruta)
-- Explicación y creación de rutas dinamicas creando carpetas entre corchetes [].
+- Explicación y Uso de caracteristicas de un input de tipo file como accept, multiple.
+- Expliación y uso de la caracteristica nativa filereader para obtener la url de una imagen que se obtiene del input.
+- Explicación y uso de useServer en una función para manejar un formulario desde el servidor.
+- Explicación, instalación y uso de slugify y xss para obtener un slug y sanitizar datos.
+- Expicación y uso de fs para pasar imagenes cargadas a la carpeta public en lugar de mandarlas a la base de datos lo que no sería eficiente.
+- Explicación y uso de fs.createWriteStream y arrayBuffer
+- Explicación y uso de Insert en la db.
+- Explicación y uso de useFormStatus.
+- Explicación y uso de validaciones del formulario.
 
 Especificaciones:-La documentación debe contener la explicación detallada de todo lo necesario para el uso de los conceptos a nivel profesional-Los ejemplos deben estar explicados con comentarios sobre lo que hacen en cada paso -El formato de entrega será markdown. Verificación:Revisa el contenido de la consulta para obtener el resultado deseado, recuerda que lo más importante es que los ejemplos estén bien explicados , tomate el tiempo necesario para obtener el mejor resultado.
 
