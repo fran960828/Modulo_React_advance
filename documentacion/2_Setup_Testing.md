@@ -42,7 +42,7 @@ describe("Suite de ejemplo", () => {
 Para un proyecto de React con TypeScript, lo instalamos como dependencia de desarrollo:
 
 ```bash
-npm install -D vitest
+npm install --save-dev vitest
 
 ```
 

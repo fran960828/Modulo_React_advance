@@ -1,16 +1,13 @@
 rol: Experto en typescript. consulta: Haz una documentación para una persona principiante con una explicación en forma de comentario al inicio y tras la explicación emplea un ejemplo sencillo para que quede más claro de los siguientes conceptos:
 
-- Explicación y uso de it y expect en el testing de una función suma de un array de numeros.
-- Explicación y empleo en script dentro de package.json lo siguientes comandos: "test": "vitest --run --reporter verbose",
-  "test:ui": "vitest --ui","test:watch":"vitest".
-- Explicación del AAA pattern. Arrange, Act, Assert.
-- Explicación y uso de más test para la función suma como el caso donde pasaríamos un string o un valor que no es un number.
-- Explicación y uso de un test para el manejo en la función suma de un array vacio.
-- Explicación y uso de un test para el manejo en la función suma si no pasamos nada (manejo de un error throw). Evitamos usar un try-catch usando una arrow-functions que se ejecuta en el expect.
-- Explicación y uso de un test para el manejo en la función suma en caso de que pasemos varios argumentos no iterables y la posibilidad de pasar un argumento opcional con el tipo de error en expected().tothrow(/is not iterable/)
-
-
-
+- Explicación sobre testear solo tu codigo y no librerias o bibliotecas de tercero o funciones nativas del navegador.
+- Explicación sobre que cada test solo debe evaular un comportamiento o resultado esperado.
+- Explicación sobre mantener los test lo más sencillos posible enfocandote en el funcionamiento y no dificultando el entendimiento.
+- Explicación sobre usar los minimos expects en un test y solo usar varios de ellos para testear el mismo comportamiento con diferentes valores.
+- Explicación de la división de código en funciones simples para el testing.
+- Explicación y uso de integration test
+- Explicación del equilibrio adecuado entre unit testing, integration testing y E2E testing.
+- Explicación de script "coverage":"vitest run --coverage"
 
 Especificaciones:-La documentación debe contener la explicación detallada de todo lo necesario para el uso de los conceptos a nivel profesional-Los ejemplos deben estar explicados con comentarios sobre lo que hacen en cada paso -El formato de entrega será markdown. Verificación:Revisa el contenido de la consulta para obtener el resultado deseado, recuerda que lo más importante es que los ejemplos estén bien explicados , tomate el tiempo necesario para obtener el mejor resultado.
 
